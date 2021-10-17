@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Cormorant", serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity; /*mandatory*/
+}
+
+/*COMMON*/
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(24, 25, 26);
+  scroll-snap-align: center;
+}
+
+.section-name {
+  /*POSITIO  ET LAYOUT*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -200px;
+
+  /*SIZE*/
+  height: 100%;
+  width: 90px;
+  font-size: 70px;
+  border-radius: 20px;
+  background-color: rgb(24, 25, 26);
+
+  /*FONT*/
+  color: white;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+}
+
+
+
+.red {
+  color: rgb(172, 33, 33);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/*FIRST SECTION*/
+
+.div-s1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 75%;
+  height: 85%;
+  margin-left: 10%;
+  border-radius: 20px;
+  box-shadow: -5px 0px 0px 0px rgba(240, 240, 240, 0.8);
+
+  background-color: rgb(24, 25, 26);
+  transition: 700ms;
+}
+
+.div-s1 p {
+  color: white;
+  position: relative;
+  top: 300px;
+}
+
+/*ABOUT PIC*/
+#draw {
+  position: absolute;
+  inset: 100px 0 0 13vw;
+  border-radius: 55% 45% 40% 60% / 61% 44% 56% 39%;
+  filter: grayscale();
+  transition: 700ms;
+  width: 300px;
+  border: none;
+}
+#draw:hover {
+  filter: none;
+  border-radius: 59% 41% 60% 40% / 45% 55% 45% 55%;
+}
+
+#nickname {
+  inset: 80px 0 0 650px;
+}
+
+#name {
+  inset: 300px 0 0 650px;
+}
+
+.names {
+  font-size: 140px;
+  color: white;
+  text-transform: uppercase;
+  position: absolute;
+  font-weight: 500;
+}
+
+
+.letter {
+  display: inline-block;
+  transition: 400ms;
+}
+
+/* .letter:hover {
+  transform: translateY(-15px);
+} */
+
+/*-------------------------------------------------------------------------------------------*/
+
+
+/*SECOND SECTION*/
+.div-s2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  
+  
+
+  width: 75%;
+  height: 85%;
+  margin-left: 10%;
+  border-radius: 20px;
+  box-shadow: -5px 0px 0px 0px rgba(240, 240, 240, 0.8);
+
+  background-color: rgb(24, 25, 26);
+  padding-left: 8vw;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 35px;
+  top: 50px; 
+  text-align: center;
+}
+
+#title-simplon {
+  font-size: 45px;
+}
+
+.div-s2 p {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  font-size: 1.5vw;
+}
+
+.list {
+  margin-top: 20px;
+  padding-right: 10vw;
+}
+
+li {
+  margin-top: 50px;
+  list-style-type: none;
+  font-size: 25px;
+}
+
+.second {
+  padding-left: 30px;
+}
+
+.list-title {
+  font-size: 35px;
+}
+
+.icons {
+  background-color: transparent;
+  position: absolute;
+  right: 0;
+  top: 40vh;
+  width: 100px;
+  height: 200px;
+  z-index: 1000;
+}
+
+.icons img {
+  width: 50px;
+  margin: 10px 0;
+  transition: 400ms;
+}
+
+.icons img:hover {
+  transform: scale(1.4);
+  cursor: pointer;
+}
+
+
+/*---------------------------------------------------------------------------*/
+/*RESPONSIVE*/
+@media screen and (max-width: 1482px) {
+  .letter{
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 1232px) {
+  .letter{
+    font-size: 70px;
+  }
+  #draw {
+    width: 230px;
+    /* inset: 100px 0 0 150px; */
+  }
+  #name {
+    inset: 220px 0 0 650px;
+  }
+
+  .div-s1 p {
+    top: 250px;
+  }
+
+  .section-name {
+    font-size: 45px;
+    left: -140px;
+  }
+
+  #nickname {
+    inset: 80px 0 0 500px;
+  }
+
+  #name {
+    inset: 220px 0 0 500px;
+  }
+
+  #title-simplon {
+    font-size: 35px;
+  }
+
+  .list {
+    margin-top: 10px;
+  }
+
+  .li-mt {
+    margin-top: 20px;
+  }
+
+  .list-title {
+    font-size: 25px;
+  }
+
+  li {
+    font-size: 25px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #nickname {
+    inset: 360px 0 0 20vw;
+  }
+
+  #name {
+    inset: 480px 0 0 20vw;
+  }
+
+  #draw {
+    inset: 70px 0 0 20vw;
+  }
+}
+
+@media screen and (max-width: 1340px) {
+  .icons img {
+    display: none;
+  }
+}
+
+
+
+
+
